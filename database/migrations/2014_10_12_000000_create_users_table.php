@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('type')->default('user');
             $table->boolean('ban')->default(0);
             $table->string('code')->nullable();
+            $table->integer('balance')->default(0);
             $table->string('image_path')->nullable();
             $table->string('status')->nullable();
             $table->integer('phone')->nullable();
