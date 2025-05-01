@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -14,15 +15,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//user
 
-Route::middleware(['user.auth'])->group(function(){
- 
-});
-
-//seller
-
-Route::middleware(['seller.auth'])->group(function(){
-
+Route::middleware(['admin.auth'])->group(function(){
+//hajar
 
 });
