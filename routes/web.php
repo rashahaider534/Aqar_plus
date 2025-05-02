@@ -1,7 +1,10 @@
 <?php
 
+use App\Mail\CodeMail;
+use App\Mail\Welcome;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
