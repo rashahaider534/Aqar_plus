@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //user
 
 Route::middleware(['user.auth'])->group(function(){
- 
+
 });
 
 //seller
@@ -26,3 +26,4 @@ Route::middleware(['seller.auth'])->group(function(){
 
 
 });
+//rasha
