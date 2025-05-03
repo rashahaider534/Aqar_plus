@@ -15,7 +15,7 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!auth()->guard('Admin')->check())
+        if(!auth()->guard('admin')->check())
         abort(403,'Access denied');
         return $next($request);
     }

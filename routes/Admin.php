@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -15,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::middleware(['admin.auth'])->group(function(){
-//hajar
+  
+Route::prefix('admin')->group(function(){ 
+  
+Route::post('login',[AuthController::class,'login_admin']);
 
 });
