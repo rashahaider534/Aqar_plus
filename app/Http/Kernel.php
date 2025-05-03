@@ -21,6 +21,10 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+
+
+
+
     ];
 
     /**
@@ -66,5 +70,9 @@ class Kernel extends HttpKernel
         'admin.auth' => \App\Http\Middleware\AdminAuth::class,
         'user.auth' => \App\Http\Middleware\UserAuth::class,
         'seller.auth' => \App\Http\Middleware\SellerAuth::class,
+    ];
+    protected $routeMiddleware = [
+        // ...
+        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }

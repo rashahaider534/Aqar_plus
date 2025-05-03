@@ -3,7 +3,7 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +27,5 @@ Route::middleware(['seller.auth'])->group(function(){
 
 });
 //rasha
+
+
