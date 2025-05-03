@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('code')->nullable();
             $table->boolean('in_code')->default(0);
             $table->integer('balance')->default(0);
-            $table->string('image_path')->nullable();
+            $table->string('profile_photo')->nullable();
             $table->string('status')->nullable();
             $table->integer('phone')->nullable();
             $table->rememberToken();

@@ -16,9 +16,13 @@ class UserAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $user= Auth::user();
-        if(!$user|| $user->type!=='user'||$user->ban)
-        abort(response()->json(['message' => 'Access denied.'], 403));
+        $user = Auth::guard('sanctum')->user();
+
+        if (!$user||$user->type !== 'user' || $user->ban) {
+            return response()->json(['message' => 'Access denied.'], 403);
+        }
+    
         return $next($request);
     }
-}
+    }
+

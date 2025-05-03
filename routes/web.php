@@ -19,13 +19,12 @@ use Illuminate\Support\Facades\Route;
 */
 //user
 
-Route::middleware(['user.auth'])->group(function(){
- 
+Route::middleware(['auth:sanctum','user.auth'])->group(function(){
+
 });
 
-//seller
-
-Route::middleware(['seller.auth'])->group(function(){
+Route::middleware(['auth:sanctum','seller.auth'])->group(function(){
 
 
 });
+//rasha
